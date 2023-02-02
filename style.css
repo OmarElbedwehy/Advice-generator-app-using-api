@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: hsl(218, 23%, 16%);
+    font-family: 'Manrope', sans-serif;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 450px;
+    background-color: hsl(217, 19%, 24%);
+    padding: 2.2rem;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+}
+
+.card h3{
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.card p{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin: 2.2rem 0;
+    color: hsl(193, 38%, 86%);
+}
+
+.card .desk-img{
+    display: block;
+    padding-bottom: 30px;
+}
+
+.card .mob-img{
+    display: none;
+    padding-bottom: 15px;
+}
+
+.card .dice{
+    background-color: hsl(150, 100%, 66%);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 49.5%;
+    bottom: -25px;
+    transform: translateX(-49.5%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card .dice:hover{
+    box-shadow: -1px -1px 10px 7px hsl(217deg 19% 38%);
+}
+
+footer{
+    background-color: #006666;
+    padding: 20px;
+    border-radius: 10px;
+    color: hsl(193, 38%, 86%);
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    font-size: 1.2rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+footer a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: hsl(193, 38%, 86%);
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+    bottom: -5px;
+}
+
+footer a:hover::after{
+    width: 100%;
+}
+
+@keyframes rotate_dice {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(269deg);
+    }
+}
+
+@media (max-width: 780px) {
+    .card{
+        width: 299px;
+    }
+    .card .mob-img{
+        display: block;
+    }
+    .card .desk-img{
+        display: none;
+    }
+}
